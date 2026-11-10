@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-app-bg text-app-text font-sans antialiased;
+    /* Optional: Lock the max-width to simulate a mobile app on desktop */
+    margin: 0 auto;
+    max-width: 480px;
+    min-height: 100vh;
+    box-shadow: 0 0 40px rgba(0,0,0,0.05);
+    background-color: theme('colors.app.bg');
+  }
+}
+
+/* Hide scrollbar for clean UI but keep functionality */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
